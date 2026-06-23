@@ -15,13 +15,15 @@
 Проект построен на **многослойной архитектуре** с направленностью зависимостей
 строго сверху вниз и паттерном **Repository** для доступа к данным.
 
-| Слой | Реализация |
-|------|-----------|
-| Presentation | Flutter-виджеты и экраны (`pages`, `widgets`, `dialogs`) |
-| Control | `TaskController`, `WeekController` (ChangeNotifier + Provider) |
-| Model | `TaskRepository`, `SqliteTaskRepository`, `SettingsModel` |
-| Entity | `Task`, `Week` (доменные объекты) |
-| Foundation | SQLite (`sqflite`), `AuthService`, `DateFormatter` |
+
+| Слой         | Реализация                                                     |
+| ------------ | -------------------------------------------------------------- |
+| Presentation | Flutter-виджеты и экраны (`pages`, `widgets`, `dialogs`)       |
+| Control      | `TaskController`, `WeekController` (ChangeNotifier + Provider) |
+| Model        | `TaskRepository`, `SqliteTaskRepository`, `SettingsModel`      |
+| Entity       | `Task`, `Week` (доменные объекты)                              |
+| Foundation   | SQLite (`sqflite`), `AuthService`, `DateFormatter`             |
+
 
 ## Технологический стек
 
@@ -120,25 +122,29 @@ APK после сборки: `build/app/outputs/flutter-apk/app-release.apk`.
 
 ## Функциональность
 
-| Раздел | Возможности | Компонент |
-|--------|------------|-----------|
-| Аутентификация | Вход, регистрация, выход | `AuthScreen`, `AuthService` |
-| Задачи | Создание, просмотр, отметка выполнения | `AddTaskPage`, `TaskCard` |
-| Календарь | Недельная и месячная навигация | `WeekPageView`, `TaskCalendarDialog` |
-| Настройки | Тема, шрифт, основной цвет | `SettingsPage`, `SettingsModel` |
-| Хранение | Локальная БД, офлайн-доступ | `SqliteTaskRepository` |
+
+| Раздел         | Возможности                            | Компонент                            |
+| -------------- | -------------------------------------- | ------------------------------------ |
+| Аутентификация | Вход, регистрация, выход               | `AuthScreen`, `AuthService`          |
+| Задачи         | Создание, просмотр, отметка выполнения | `AddTaskPage`, `TaskCard`            |
+| Календарь      | Недельная и месячная навигация         | `WeekPageView`, `TaskCalendarDialog` |
+| Настройки      | Тема, шрифт, основной цвет             | `SettingsPage`, `SettingsModel`      |
+| Хранение       | Локальная БД, офлайн-доступ            | `SqliteTaskRepository`               |
+
 
 ## Аутентификация (Supabase)
 
 Приложение использует Supabase Auth для регистрации и входа по email/password.
 Основные операции:
 
-| Операция | Метод SDK | Назначение |
-|----------|-----------|-----------|
-| Регистрация | `auth.signUp` | Создание учётной записи |
-| Вход | `auth.signInWithPassword` | Получение сессии |
-| Выход | `auth.signOut` | Завершение сессии |
-| Состояние | `onAuthStateChange` | Маршрутизация AuthGate → HomePage |
+
+| Операция    | Метод SDK                 | Назначение                        |
+| ----------- | ------------------------- | --------------------------------- |
+| Регистрация | `auth.signUp`             | Создание учётной записи           |
+| Вход        | `auth.signInWithPassword` | Получение сессии                  |
+| Выход       | `auth.signOut`            | Завершение сессии                 |
+| Состояние   | `onAuthStateChange`       | Маршрутизация AuthGate → HomePage |
+
 
 Данные задач не синхронизируются с облаком и остаются на устройстве пользователя.
 
@@ -149,16 +155,3 @@ flutter test                         # все тесты
 flutter analyze                      # статический анализ (flutter_lints)
 ```
 
-## Статистика разработки
-
-> Финальные графики GitHub Insights добавляются на момент сдаче в `docs/images/`.
-
-- Всего коммитов: _обновить при сдаче_
-- Период разработки: _обновить при сдаче_
-
-![Активность коммитов](docs/images/git-stats-commit-activity.png)
-![Распределение по времени](docs/images/git-stats-punch-card.png)
-
-## Лицензия
-
-Проект распространяется под лицензией MIT — см. [LICENSE](LICENSE).
