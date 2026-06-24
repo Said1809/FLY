@@ -8,6 +8,6 @@
 | Структура работ (WBS) | [02-wbs.md](02-wbs.md) |
 | Календарный план (диаграмма Ганта) | [03-gantt-chart.md](03-gantt-chart.md) |
 | Оценка трудоёмкости (COCOMO) | [04-cocomo-estimation.md](04-cocomo-estimation.md) |
-| Пояснительная записка | [05-explanatory-note.docx](05-explanatory-note.docx) |
+| Пояснительная записка | [Пояснительная записка.docx](Пояснительная%20записка.docx) |
 
 Эксплуатационная документация — в [11-user-guide](../11-user-guide/).

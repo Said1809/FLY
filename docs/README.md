@@ -43,7 +43,8 @@
 ## Быстрые ссылки
 
 - [Техническое задание](12-final-report/01-technical-specification.md)
-- [Пояснительная записка](12-final-report/05-explanatory-note.docx)
+- [Пояснительная записка](12-final-report/Пояснительная%20записка.docx)
+- [Тестирование и покрытие (87,7 %)](06-testing/README.md)
 - [Руководство пользователя](11-user-guide/01-user-manual.md)
 - [Сборка APK](10-deployment/README.md)
 

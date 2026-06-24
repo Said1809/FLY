@@ -151,7 +151,17 @@ APK после сборки: `build/app/outputs/flutter-apk/app-release.apk`.
 ## Тестирование
 
 ```bash
-flutter test                         # все тесты
+flutter test                         # все тесты (25)
+flutter test --coverage              # отчёт покрытия (coverage/lcov.info)
 flutter analyze                      # статический анализ (flutter_lints)
 ```
+
+Покрытие бизнес-логики: **87,7 %** (порог методички > 40 %). Подробности и
+`lcov.info` для сдачи — в [docs/06-testing](docs/06-testing/README.md).
+
+## Документация
+
+Полный комплект курсового проекта (этапы 00–12), диаграммы, скриншоты,
+[пояснительная записка](docs/12-final-report/Пояснительная%20записка.docx) —
+в каталоге [docs/](docs/README.md).
 
